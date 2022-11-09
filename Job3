@@ -1,0 +1,43 @@
+Apache HTTP Server
+52% des sites web dans le monde sont hébergés sur un serveur qui utilise Apache.
+La longévité de ce logiciel lui confère une documentation importante tout comme l'intégration 
+d'autres logiciels.
+
+Avantages:
+Logiciel fiable et stable, facile à configurer, adapté aux débutants.
+Fonctionne avec les sites WordPress.
+
+Inconvénients:
+Problèmes de performances sur les sites web avec un énorme trafic.
+Trop d’options de configuration peuvent mener à la vulnérabilité de la sécurité.
+
+Nginx
+Nginx est beaucoup plus performant qu'Apache dans le traitement de nombreuses connexions simultanées. Un autre avantage de ce serveur Web par rapport à Apache est que nginx utilise beaucoup moins de stockage par connexion client.
+
+Avantages:
+Nginx sert du contenu statique environ 2,5 fois plus rapidement qu’Apache.
+S’adapte mieux qu’Apache. Nginx gère mieux le trafic élevé qu’Apache, une autre raison pour laquelle il est plus rapide.
+Nécessite moins de ressources – Nginx nécessite moins de mémoire, ce qui aide à économiser sur les coûts d’hébergement.
+
+Inconvénients:
+Options limitées. Peu d’hébergeurs offrent la prise en charge de Nginx.
+Communauté moins développée. Apache a une énorme communauté et des tonnes de modules qui facilitent l’obtention d’une assistance pour faire à peu près n’importe quoi.
+Une moins bonne option pour servir du contenu dynamique. Nginx utilise un logiciel tiers pour gérer les demandes de contenu dynamique. Dans certains cas, il peut fonctionner moins bien qu’Apache.
+
+Node.js
+Le projet Node.js est administré par la Fondation Node.js, et supporté par la Fondation Linux. Node.js est publié sous différentes licences.
+
+Avantages:
+La différence entre Node.js et les autres serveurs web est qu'il est avant tout un environnement d'exécution multi-plateforme pour créer des applications réseau. Node.js propose une architecture événementielle capable de gérer des entrées et des sorties asynchrones. Cela permet d'optimiser le débit et l'évolutivité des applications Web.
+
+Inconvénients:
+Node.js est utilisé par 0,2% des sites web.
+
+Lighttpd
+Lighttpd existe depuis 2003 et est distribué sous licence BSD.
+
+Avantages:
+Lighttpd se distingue des autres serveurs web par sa faible empreinte mémoire, sa faible charge CPU, et ses optimisations de vitesse. Il utilise une architecture événementielle, est optimisé pour un grand nombre de connexions parallèles, et prend en charge FastCGI, SCGI, Auth, Output-compression, la réécriture d'URL entre autres. Lighttpd est un serveur web populaire pour Catalyst ou le framework Ruby on Rails.
+
+Inconvénients:
+Il est utilisé par environ 0,1% des sites Web.

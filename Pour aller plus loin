@@ -1,0 +1,3 @@
+Bien que les certificats auto-signés offrent un cryptage, ils n'offrent aucune authentification.
+
+Un problème courant après l'ajout d'un certificat SSL est que le navigateur affiche toujours le site comme non sécurisé. Cela arrive le plus souvent parce qu'il y a des liens sur la page qui dirigent vers HTTP au lieu de HTTPS.
