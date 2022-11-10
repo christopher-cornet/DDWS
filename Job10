@@ -1,0 +1,21 @@
+Installer Samba:
+sudo apt install samba
+
+Editer le fichier de config de Samba:
+sudo nano /etc/samba/smb.conf
+
+Ajouter à la fin du fichier:
+[sambashare]
+        comment = Samba sur Linux       
+        path = /home/christopher/sambashare
+        read only = no
+        browsable = yes
+        
+Redémarrer Samba:
+sudo service smbd restart
+
+Mettre à jour les règles du pare-feu pour autoriser l'accès à Samba:
+sudo ufw allow samba
+
+Mettre un mot de passe:
+sudo smbpasswd -a christopher

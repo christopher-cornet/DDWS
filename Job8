@@ -1,0 +1,11 @@
+Voir sa propre passerelle par défaut:
+route
+
+Ajout de l'ip en passerelle par défaut:
+sudo route add default gw 10.10.25.15
+
+Ajouter l'ip de la 1ere VM en passerelle par défaut sur une autre VM:
+gateway 10.10.25.15
+
+Redémarrer le réseau:
+sudo /etc/init.d/networking restart

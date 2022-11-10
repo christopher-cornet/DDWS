@@ -1,0 +1,14 @@
+Mettre à jour les paquets:
+sudo apt update 
+
+Installer le paquet apache2: 
+sudo apt install apache2
+
+Autoriser Apache sur le pare-feu:
+sudo ufw allow 'Apache Full'
+On met Apache Full car il ouvre les ports 80 (normal) et 443 (SSL)
+
+Vérifier si apache2 fonctionne:
+sudo systemctl status apache2
+
+Entrer l'ip du serveur sur internet.

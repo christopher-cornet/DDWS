@@ -1,3 +1,33 @@
+Générer notre propre certificat auto-signé avec openssl:
+openssl genrsa -out PrivateKeyForLocalhost.priv
+
+Créer le certificat localhostCertificate.pem en utilisant la clé privée que nous avons créé:
+openssl req -x509 -new -nodes -key PrivateKeyForLocalhost.priv -sha256 -days 365 -out localhostCertificate.pem
+
+Installer le certificat pour lui faire confiance dans notre réseau local:
+
+sudo mkdir /usr/local/share/ca-certificates/extra
+
+sudo cp localhostCertificate.pem /usr/local/share/ca-certificates/extra/localhostCertificate.crt
+
+sudo update-ca-certificates
+
+Faire:
+
+sudo nano /etc/apache2/sites-available/https.conf
+
+Ensuite:
+
+sudo a2enmod ssl
+
+sudo systemctl restart apache2
+
+Enfin, on active la nouvelle configuration dans https.conf et on redémarre le serveur Apache:
+
+sudo a2ensite https.conf
+
+sudo systemctl restart apache2
+
 Bien que les certificats auto-signés offrent un cryptage, ils n'offrent aucune authentification.
 
 Un problème courant après l'ajout d'un certificat SSL est que le navigateur affiche toujours le site comme non sécurisé. Cela arrive le plus souvent parce qu'il y a des liens sur la page qui dirigent vers HTTP au lieu de HTTPS.

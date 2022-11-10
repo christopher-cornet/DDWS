@@ -1,0 +1,16 @@
+Editer le fichier resolv.conf:
+sudo nano /etc/resolv.conf
+Ajouter le nom de domaine (dnsproject.prepa.com) et l'adresse IP du serveur.
+
+Créer un fichier dans /etc/NetworkManager/conf.d/ qui contient:
+[main]
+dns=none
+
+Redémarrer NetWorkManager:
+systemctl reload NetworkManager
+
+Ajouter l'ip dans le fichier resolv.conf:
+sudo nano /etc/resolv.conf
+
+Redémarrer le serveur:
+systemctl restart dnsproject.prepa.com
